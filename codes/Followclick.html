@@ -1,0 +1,24 @@
+<!-- This is a code that creates a webpage with the heading "Hello World". It then uses the Jquery library that selects the tile and makes it move to the place 
+you've clicked on. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mousemove</title>
+</head>
+
+<body>
+    <h1 id="heading">Hello world!</h1>
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+    <script>
+        $("html").click(function(event){
+            $("#heading").offset({
+                left:event.pageX,
+                top:event.pageY
+            });
+          });
+
+    </script>
+</body>
+</html>
